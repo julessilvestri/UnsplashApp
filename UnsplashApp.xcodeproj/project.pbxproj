@@ -7,24 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BABD20212B60167E00944A63 /* environment.plist in Resources */ = {isa = PBXBuildFile; fileRef = BABD20202B60167E00944A63 /* environment.plist */; };
 		BADC2C212B5FE9E7001B571E /* UnsplashAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADC2C202B5FE9E7001B571E /* UnsplashAppApp.swift */; };
 		BADC2C232B5FE9E7001B571E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADC2C222B5FE9E7001B571E /* ContentView.swift */; };
 		BADC2C252B5FE9E8001B571E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BADC2C242B5FE9E8001B571E /* Assets.xcassets */; };
 		BADC2C282B5FE9E8001B571E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BADC2C272B5FE9E8001B571E /* Preview Assets.xcassets */; };
 		BADC2C2F2B5FFC9F001B571E /* PListManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADC2C2E2B5FFC9F001B571E /* PListManager.swift */; };
-		BADC2C312B5FFD5F001B571E /* environment.plist in Resources */ = {isa = PBXBuildFile; fileRef = BADC2C302B5FFD5F001B571E /* environment.plist */; };
 		BADC2C332B6008B7001B571E /* UnsplashAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADC2C322B6008B7001B571E /* UnsplashAPI.swift */; };
 		BADC2C352B600A08001B571E /* Feedstate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADC2C342B600A08001B571E /* Feedstate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BABD20202B60167E00944A63 /* environment.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = environment.plist; sourceTree = "<group>"; };
 		BADC2C1D2B5FE9E7001B571E /* UnsplashApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnsplashApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BADC2C202B5FE9E7001B571E /* UnsplashAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashAppApp.swift; sourceTree = "<group>"; };
 		BADC2C222B5FE9E7001B571E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BADC2C242B5FE9E8001B571E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BADC2C272B5FE9E8001B571E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BADC2C2E2B5FFC9F001B571E /* PListManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PListManager.swift; sourceTree = "<group>"; };
-		BADC2C302B5FFD5F001B571E /* environment.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = environment.plist; sourceTree = "<group>"; };
 		BADC2C322B6008B7001B571E /* UnsplashAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashAPI.swift; sourceTree = "<group>"; };
 		BADC2C342B600A08001B571E /* Feedstate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feedstate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -43,6 +43,7 @@
 		BADC2C142B5FE9E7001B571E = {
 			isa = PBXGroup;
 			children = (
+				BABD20202B60167E00944A63 /* environment.plist */,
 				BADC2C1F2B5FE9E7001B571E /* UnsplashApp */,
 				BADC2C1E2B5FE9E7001B571E /* Products */,
 			);
@@ -64,7 +65,6 @@
 				BADC2C222B5FE9E7001B571E /* ContentView.swift */,
 				BADC2C242B5FE9E8001B571E /* Assets.xcassets */,
 				BADC2C262B5FE9E8001B571E /* Preview Content */,
-				BADC2C302B5FFD5F001B571E /* environment.plist */,
 				BADC2C322B6008B7001B571E /* UnsplashAPI.swift */,
 				BADC2C342B600A08001B571E /* Feedstate.swift */,
 			);
@@ -137,9 +137,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BABD20212B60167E00944A63 /* environment.plist in Resources */,
 				BADC2C282B5FE9E8001B571E /* Preview Assets.xcassets in Resources */,
 				BADC2C252B5FE9E8001B571E /* Assets.xcassets in Resources */,
-				BADC2C312B5FFD5F001B571E /* environment.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
