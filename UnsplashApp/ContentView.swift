@@ -71,34 +71,34 @@ struct ContentView: View {
     
     // Créez cette nouvelle structure visuelle
     var body: some View {
-        VStack {
-            // le bouton va lancer l'appel réseau
-            Button(action: {
-                Task {
-                    await loadData()
-                }
-            }, label: {
-                Text("Load Data")
-            })
-            ScrollView {
-                LazyVGrid(columns: columns, spacing: 8){
-                    ForEach(imageList) { image in
-                        AsyncImage(url: URL(string: image.url.regular)){ image in
-                            image.resizable()
-                        } placeholder: {
-                            ProgressView()
+        NavigationStack{
+            VStack {
+                // le bouton va lancer l'appel réseau
+                Button(action: {
+                    Task {
+                        await loadData()
+                    }
+                }, label: {
+                    Text("Load Data")
+                })
+                ScrollView {
+                    LazyVGrid(columns: columns, spacing: 8){
+                        ForEach(imageList) { image in
+                            AsyncImage(url: URL(string: image.url.regular)){ image in
+                                image.resizable()
+                            } placeholder: {
+                                ProgressView()
+                            }
+                            .frame(height: 150)
+                            .cornerRadius(12)
                         }
-                        .frame(height: 150)
-                        .cornerRadius(12)
                     }
                 }
+                .padding(.horizontal)
+                .clipShape(RoundedRectangle(cornerRadius: 12))
+                .navigationBarTitle("Feed")
             }
-            .padding(.horizontal)
-            .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
-            .navigationBarTitle("Feed")
-            
-        }
-    }
+        }}
 }
 
 
