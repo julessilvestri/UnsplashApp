@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		BA03DFAE2B60FD2F00249EF1 /* TopicCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA03DFAD2B60FD2F00249EF1 /* TopicCard.swift */; };
 		BA03DFB02B610DC200249EF1 /* TopicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA03DFAF2B610DC200249EF1 /* TopicView.swift */; };
+		BA03DFB22B61175F00249EF1 /* PhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA03DFB12B61175F00249EF1 /* PhotoView.swift */; };
 		BA2F7F222B60188D005190C4 /* FeedState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2F7F212B60188D005190C4 /* FeedState.swift */; };
 		BABD20212B60167E00944A63 /* environment.plist in Resources */ = {isa = PBXBuildFile; fileRef = BABD20202B60167E00944A63 /* environment.plist */; };
 		BADC2C212B5FE9E7001B571E /* UnsplashAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADC2C202B5FE9E7001B571E /* UnsplashAppApp.swift */; };
@@ -22,6 +23,7 @@
 /* Begin PBXFileReference section */
 		BA03DFAD2B60FD2F00249EF1 /* TopicCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicCard.swift; sourceTree = "<group>"; };
 		BA03DFAF2B610DC200249EF1 /* TopicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicView.swift; sourceTree = "<group>"; };
+		BA03DFB12B61175F00249EF1 /* PhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoView.swift; sourceTree = "<group>"; };
 		BA2F7F212B60188D005190C4 /* FeedState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedState.swift; sourceTree = "<group>"; };
 		BABD20202B60167E00944A63 /* environment.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = environment.plist; sourceTree = "<group>"; };
 		BADC2C1D2B5FE9E7001B571E /* UnsplashApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnsplashApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,6 +75,7 @@
 				BA2F7F212B60188D005190C4 /* FeedState.swift */,
 				BA03DFAD2B60FD2F00249EF1 /* TopicCard.swift */,
 				BA03DFAF2B610DC200249EF1 /* TopicView.swift */,
+				BA03DFB12B61175F00249EF1 /* PhotoView.swift */,
 			);
 			path = UnsplashApp;
 			sourceTree = "<group>";
@@ -163,6 +166,7 @@
 				BADC2C2F2B5FFC9F001B571E /* PListManager.swift in Sources */,
 				BA03DFB02B610DC200249EF1 /* TopicView.swift in Sources */,
 				BADC2C212B5FE9E7001B571E /* UnsplashAppApp.swift in Sources */,
+				BA03DFB22B61175F00249EF1 /* PhotoView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

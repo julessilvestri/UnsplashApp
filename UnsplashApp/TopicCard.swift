@@ -12,7 +12,7 @@ struct TopicCard: View {
     let topic: TopicElement
     
     var body: some View {
-        VStack {
+        VStack {            
             AsyncImage(url: URL(string: topic.coverPhoto.urls.small))
                 .frame(width: 100, height: 60)
                 .cornerRadius(12)

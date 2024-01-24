@@ -22,10 +22,13 @@ struct UnsplashPhoto: Codable, Identifiable {
 }
 
 struct User: Codable {
-    let name: String
+    let id, username: String
+    let firstName, lastName : String?
     
     enum CodingKeys: String, CodingKey{
-        case name
+        case id, username
+        case firstName = "first_name"
+        case lastName = "last_name"
     }
 }
 
@@ -105,13 +108,15 @@ struct ContentView: View {
                 ScrollView {
                     LazyVGrid(columns: columns, spacing: 8){
                         ForEach(homeFeed) { image in
-                            AsyncImage(url: URL(string: image.url.regular)){ image in
-                                image.resizable()
-                            } placeholder: {
-                                ProgressView()
+                            NavigationLink(destination: PhotoView(photo: image)){
+                                AsyncImage(url: URL(string: image.url.regular)){ image in
+                                    image.resizable()
+                                } placeholder: {
+                                    ProgressView()
+                                }
+                                .frame(height: 150)
+                                .cornerRadius(12)
                             }
-                            .frame(height: 150)
-                            .cornerRadius(12)
                         }
                     }
                 }
