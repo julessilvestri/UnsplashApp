@@ -37,12 +37,39 @@ struct UnsplashPhotoUrls: Codable {
     let thumb: String
 }
 
+struct TopicElement: Codable, Identifiable {
+    let id: String
+    let slug: String
+    let title: String
+    let coverPhoto : CoverTopic
+    
+    enum CodingKeys: String, CodingKey {
+        case id, slug, title
+        case coverPhoto = "cover_photo"
+    }
+}
+
+struct CoverTopic: Codable{
+    let urls: UnsplashPhotoUrls
+}
+
+
+struct PreviewPhoto: Codable {
+    let id, slug: String
+    let urls: UnsplashPhotoUrls
+    
+    enum CodingKeys: String, CodingKey {
+        case id, slug
+        case urls
+    }
+}
+
 struct ContentView: View {
     let columns = [
         GridItem(.flexible(minimum: 150)),
         GridItem(.flexible(minimum: 150))
     ]
-
+    
     @State var imageList: [UnsplashPhoto] = []
     @StateObject var feedState = FeedState()
     
@@ -52,48 +79,65 @@ struct ContentView: View {
                 Button(action: {
                     Task {
                         await feedState.fetchHomeFeed()
+                        await feedState.fetchTopicFeed()
                     }
                 }, label: {
                     Text("Load Data")
                 })
-                if let homeFeed = feedState.homeFeed {
-                    ScrollView {
-                        LazyVGrid(columns: columns, spacing: 8){
-                            ForEach(homeFeed) { image in
-                                AsyncImage(url: URL(string: image.url.regular)){ image in
-                                    image.resizable()
-                                } placeholder: {
-                                    ProgressView()
+                
+                if let topics = feedState.topic {	
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        HStack{
+                            ForEach(topics, id: \.id) { topic in
+                                NavigationLink(destination: TopicView(topic: topic)){
+                                    TopicCard(topic: topic)
                                 }
-                                .frame(height: 150)
-                                .cornerRadius(12)
                             }
                         }
+                        .padding(.horizontal)
+                        .padding(.vertical)
                     }
-                    .padding(.horizontal)
-                    .clipShape(RoundedRectangle(cornerRadius: 12))
-                    .navigationBarTitle("Feed")
                 }
-                else{
-                    ScrollView {
-                        LazyVGrid(columns: columns, spacing: 8){
-                            ForEach(0..<12, id: \.self) { image in
-                                Rectangle()
+                
+            }
+            
+            if let homeFeed = feedState.homeFeed {
+                ScrollView {
+                    LazyVGrid(columns: columns, spacing: 8){
+                        ForEach(homeFeed) { image in
+                            AsyncImage(url: URL(string: image.url.regular)){ image in
+                                image.resizable()
+                            } placeholder: {
+                                ProgressView()
+                            }
+                            .frame(height: 150)
+                            .cornerRadius(12)
+                        }
+                    }
+                }
+                .padding(.horizontal)
+                .clipShape(RoundedRectangle(cornerRadius: 12))
+                .navigationBarTitle("Feed")
+            }
+            else{
+                ScrollView {
+                    LazyVGrid(columns: columns, spacing: 8){
+                        ForEach(0..<12, id: \.self) { image in
+                            Rectangle()
                                 .frame(height: 150)
                                 .cornerRadius(12)
                                 .foregroundColor(.gray)
-                            }
                         }
                     }
-                    .padding(.horizontal)
-                    .clipShape(RoundedRectangle(cornerRadius: 12))
-                    .redacted(reason: .placeholder)
-                    .navigationBarTitle("Feed")
                 }
+                .padding(.horizontal)
+                .clipShape(RoundedRectangle(cornerRadius: 12))
+                .redacted(reason: .placeholder)
             }
         }
     }
 }
+
 
 
 #Preview {
