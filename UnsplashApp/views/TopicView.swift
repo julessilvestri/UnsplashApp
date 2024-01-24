@@ -39,7 +39,7 @@ struct TopicView: View {
                 }
                 .padding(.horizontal)
                 .clipShape(RoundedRectangle(cornerRadius: 12))
-                .navigationBarTitle(topic.slug)
+                .navigationBarTitle(topic.title)
             }
             else{
                 ScrollView {

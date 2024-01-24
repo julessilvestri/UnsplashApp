@@ -41,8 +41,7 @@ struct ContentView: View {
                         .padding(.horizontal)
                         .padding(.vertical)
                     }
-                }
-                
+                }                
             }
             
             if let homeFeed = feedState.homeFeed {

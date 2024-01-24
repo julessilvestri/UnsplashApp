@@ -25,11 +25,11 @@ struct CoverTopic: Codable{
 
 
 struct PreviewPhoto: Codable {
-    let id, slug: String
+    let id, title: String
     let urls: UnsplashPhotoUrls
     
     enum CodingKeys: String, CodingKey {
-        case id, slug
+        case id, title
         case urls
     }
 }
