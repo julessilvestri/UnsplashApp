@@ -33,15 +33,7 @@ struct TopicView: View {
                 ScrollView {
                     LazyVGrid(columns: columns, spacing: 8){
                         ForEach(topicFeed, id: \.id) { image in
-                            NavigationLink(destination: PhotoView(photo: image)){
-                                AsyncImage(url: URL(string: image.url.regular)){ image in
-                                    image.resizable()
-                                } placeholder: {
-                                    ProgressView()
-                                }
-                                .frame(height: 150)
-                                .cornerRadius(12)
-                            }
+                            PhotoCard(image: image)
                         }
                     }
                 }

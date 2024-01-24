@@ -10,7 +10,11 @@
 		BA03DFAE2B60FD2F00249EF1 /* TopicCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA03DFAD2B60FD2F00249EF1 /* TopicCard.swift */; };
 		BA03DFB02B610DC200249EF1 /* TopicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA03DFAF2B610DC200249EF1 /* TopicView.swift */; };
 		BA03DFB22B61175F00249EF1 /* PhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA03DFB12B61175F00249EF1 /* PhotoView.swift */; };
+		BA03DFB92B61465000249EF1 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA03DFB82B61465000249EF1 /* Photo.swift */; };
 		BA2F7F222B60188D005190C4 /* FeedState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2F7F212B60188D005190C4 /* FeedState.swift */; };
+		BABA32BD2B61476A00C7EE1D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABA32BC2B61476A00C7EE1D /* User.swift */; };
+		BABA32BF2B61479900C7EE1D /* Topic.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABA32BE2B61479900C7EE1D /* Topic.swift */; };
+		BABA32C12B61485C00C7EE1D /* PhotoCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABA32C02B61485C00C7EE1D /* PhotoCard.swift */; };
 		BABD20212B60167E00944A63 /* environment.plist in Resources */ = {isa = PBXBuildFile; fileRef = BABD20202B60167E00944A63 /* environment.plist */; };
 		BADC2C212B5FE9E7001B571E /* UnsplashAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADC2C202B5FE9E7001B571E /* UnsplashAppApp.swift */; };
 		BADC2C232B5FE9E7001B571E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADC2C222B5FE9E7001B571E /* ContentView.swift */; };
@@ -24,7 +28,11 @@
 		BA03DFAD2B60FD2F00249EF1 /* TopicCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicCard.swift; sourceTree = "<group>"; };
 		BA03DFAF2B610DC200249EF1 /* TopicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicView.swift; sourceTree = "<group>"; };
 		BA03DFB12B61175F00249EF1 /* PhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoView.swift; sourceTree = "<group>"; };
+		BA03DFB82B61465000249EF1 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		BA2F7F212B60188D005190C4 /* FeedState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedState.swift; sourceTree = "<group>"; };
+		BABA32BC2B61476A00C7EE1D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		BABA32BE2B61479900C7EE1D /* Topic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Topic.swift; sourceTree = "<group>"; };
+		BABA32C02B61485C00C7EE1D /* PhotoCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCard.swift; sourceTree = "<group>"; };
 		BABD20202B60167E00944A63 /* environment.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = environment.plist; sourceTree = "<group>"; };
 		BADC2C1D2B5FE9E7001B571E /* UnsplashApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnsplashApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BADC2C202B5FE9E7001B571E /* UnsplashAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashAppApp.swift; sourceTree = "<group>"; };
@@ -46,6 +54,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BA03DFB32B61459A00249EF1 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				BA2F7F212B60188D005190C4 /* FeedState.swift */,
+				BADC2C322B6008B7001B571E /* UnsplashAPI.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		BA03DFB52B6145CA00249EF1 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				BADC2C222B5FE9E7001B571E /* ContentView.swift */,
+				BA03DFB12B61175F00249EF1 /* PhotoView.swift */,
+				BA03DFAF2B610DC200249EF1 /* TopicView.swift */,
+				BA03DFB62B6145DD00249EF1 /* widgets */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		BA03DFB62B6145DD00249EF1 /* widgets */ = {
+			isa = PBXGroup;
+			children = (
+				BA03DFAD2B60FD2F00249EF1 /* TopicCard.swift */,
+				BABA32C02B61485C00C7EE1D /* PhotoCard.swift */,
+			);
+			path = widgets;
+			sourceTree = "<group>";
+		};
+		BA03DFB72B61462F00249EF1 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				BA03DFB82B61465000249EF1 /* Photo.swift */,
+				BABA32BC2B61476A00C7EE1D /* User.swift */,
+				BABA32BE2B61479900C7EE1D /* Topic.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
 		BADC2C142B5FE9E7001B571E = {
 			isa = PBXGroup;
 			children = (
@@ -66,16 +113,13 @@
 		BADC2C1F2B5FE9E7001B571E /* UnsplashApp */ = {
 			isa = PBXGroup;
 			children = (
+				BA03DFB72B61462F00249EF1 /* models */,
+				BA03DFB52B6145CA00249EF1 /* views */,
+				BA03DFB32B61459A00249EF1 /* API */,
 				BADC2C2E2B5FFC9F001B571E /* PListManager.swift */,
 				BADC2C202B5FE9E7001B571E /* UnsplashAppApp.swift */,
-				BADC2C222B5FE9E7001B571E /* ContentView.swift */,
 				BADC2C242B5FE9E8001B571E /* Assets.xcassets */,
 				BADC2C262B5FE9E8001B571E /* Preview Content */,
-				BADC2C322B6008B7001B571E /* UnsplashAPI.swift */,
-				BA2F7F212B60188D005190C4 /* FeedState.swift */,
-				BA03DFAD2B60FD2F00249EF1 /* TopicCard.swift */,
-				BA03DFAF2B610DC200249EF1 /* TopicView.swift */,
-				BA03DFB12B61175F00249EF1 /* PhotoView.swift */,
 			);
 			path = UnsplashApp;
 			sourceTree = "<group>";
@@ -161,11 +205,15 @@
 			files = (
 				BA2F7F222B60188D005190C4 /* FeedState.swift in Sources */,
 				BADC2C332B6008B7001B571E /* UnsplashAPI.swift in Sources */,
+				BABA32BF2B61479900C7EE1D /* Topic.swift in Sources */,
 				BADC2C232B5FE9E7001B571E /* ContentView.swift in Sources */,
+				BA03DFB92B61465000249EF1 /* Photo.swift in Sources */,
 				BA03DFAE2B60FD2F00249EF1 /* TopicCard.swift in Sources */,
+				BABA32C12B61485C00C7EE1D /* PhotoCard.swift in Sources */,
 				BADC2C2F2B5FFC9F001B571E /* PListManager.swift in Sources */,
 				BA03DFB02B610DC200249EF1 /* TopicView.swift in Sources */,
 				BADC2C212B5FE9E7001B571E /* UnsplashAppApp.swift in Sources */,
+				BABA32BD2B61476A00C7EE1D /* User.swift in Sources */,
 				BA03DFB22B61175F00249EF1 /* PhotoView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
